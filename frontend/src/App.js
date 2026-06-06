@@ -5,7 +5,7 @@ import { UploadCloud, ShieldCheck, ShieldAlert, Activity, BarChart3, FileText, C
 import { motion, AnimatePresence } from 'framer-motion';
 import '@/App.css';
 
-const BACKEND_URL = "http://127.0.0.1:8000";
+const BACKEND_URL = "https://nids-sentinel-project.onrender.com";
 const API = `${BACKEND_URL}/api`;
 
 function UploadPage() {
