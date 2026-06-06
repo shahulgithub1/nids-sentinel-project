@@ -1,0 +1,121 @@
+{
+  "identity": {
+    "name": "NIDS Sentinel",
+    "archetype": "The Performance Pro (Cyber-Physical Variant)",
+    "vibe": "Tactical, Precise, Secure, Academic",
+    "theme_mode": "dark"
+  },
+  "typography": {
+    "primary_font": "IBM Plex Sans",
+    "heading_font": "Manrope",
+    "mono_font": "JetBrains Mono",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap",
+    "usage": {
+      "h1": "font-heading font-extrabold text-4xl tracking-tight lg:text-5xl",
+      "h2": "font-heading font-bold text-3xl tracking-tight",
+      "h3": "font-heading font-semibold text-2xl tracking-tight",
+      "body": "font-sans text-base leading-relaxed text-muted-foreground",
+      "label": "font-mono text-xs uppercase tracking-wider text-muted-foreground/70",
+      "data": "font-mono text-sm font-medium"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "bg-zinc-950",
+      "foreground": "text-zinc-50",
+      "card": "bg-zinc-900/50",
+      "card_border": "border-zinc-800",
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white",
+      "secondary": "bg-zinc-800 hover:bg-zinc-700 text-zinc-100",
+      "accent": "text-blue-400",
+      "success": "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+      "danger": "text-rose-500 bg-rose-500/10 border-rose-500/20",
+      "warning": "text-amber-400 bg-amber-400/10 border-amber-400/20"
+    },
+    "gradients": {
+      "hero_glow": "bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-zinc-950/0 to-zinc-950/0",
+      "beam": "from-transparent via-blue-500 to-transparent"
+    }
+  },
+  "layout": {
+    "spacing_scale": "generous",
+    "container_padding": "p-6 md:p-12",
+    "grid_system": "bento_grid_mode_b",
+    "border_radius": "rounded-md",
+    "glassmorphism": {
+      "default": "backdrop-blur-xl bg-zinc-950/70 border border-white/10 shadow-2xl"
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "sharp",
+      "default": "h-10 px-6 rounded-md font-medium transition-all active:scale-95",
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]",
+      "outline": "border border-zinc-700 hover:bg-zinc-800 hover:text-white bg-transparent"
+    },
+    "cards": {
+      "style": "technical",
+      "base": "bg-zinc-900/40 border border-zinc-800/60 backdrop-blur-sm rounded-lg overflow-hidden"
+    },
+    "inputs": {
+      "style": "minimal",
+      "base": "bg-zinc-950/50 border-zinc-800 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all"
+    },
+    "upload_zone": {
+      "style": "scanner",
+      "base": "border-2 border-dashed border-zinc-700 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 rounded-xl flex flex-col items-center justify-center p-12 cursor-pointer group relative overflow-hidden"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "noise": "opacity-[0.03] pointer-events-none fixed inset-0 z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+    },
+    "effects": {
+      "tracing_beam": "absolute inset-0 pointer-events-none border-2 border-transparent [mask-image:linear-gradient(transparent,white,transparent)]"
+    }
+  },
+  "motion": {
+    "reduced_motion": "respect",
+    "transitions": {
+      "default": "transition-all duration-300 ease-out",
+      "hover": "hover:-translate-y-1 hover:shadow-lg"
+    },
+    "animations": {
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+      "pulse_slow": "animate-pulse duration-[3000ms]"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1762279388956-1c098163a2a8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract neon network lines",
+        "usage": "Hero background with heavy overlay (opacity 20%)"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred": ["ShieldCheck", "ShieldAlert", "Activity", "UploadCloud", "FileText", "BarChart3", "Cpu"]
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react', 'recharts', 'framer-motion', 'clsx', 'tailwind-merge' immediately.",
+    "2. THEME: Force DARK MODE in tailwind.config.js. Do not implement a toggle. This is a security tool.",
+    "3. LAYOUT: Use the 'Bento Grid' for the Results page. Top row: Status Banner (Full width). Middle row: Confusion Matrix (2/3) + Accuracy Score (1/3). Bottom row: Detailed Logs.",
+    "4. UPLOAD: The upload component must be the centerpiece of the landing page. Use the 'tracing beam' effect or a glowing border on hover.",
+    "5. CHARTS: Use Recharts. Customize the tooltips to be dark and minimal (bg-zinc-900 border-zinc-800).",
+    "6. NOISE: Add the noise texture overlay to the entire <body> to prevent the 'flat digital' look.",
+    "7. ACCESSIBILITY: Ensure the Red/Green status colors are distinguishable. Add text labels alongside color indicators.",
+    "8. ROUTING: Use React Router. '/' for Upload, '/results' for the dashboard.",
+    "9. MOCKING: If the backend is not ready, MOCK the API response in the frontend to demonstrate the UI. Highlight this in the summary."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Use glass-morphism effects with backdrop filters.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Add data-testid to all interactive elements."
+  ]
+}
